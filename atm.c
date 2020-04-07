@@ -1,5 +1,4 @@
 #include "atm.h"
-#include<stdio.h>
 
 unsigned int get_money(unsigned short int amount)
 {
