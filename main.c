@@ -9,9 +9,10 @@ int display_notes(unsigned int notes_count)
   for (int index = 0; index < 8; index++)
   {
     int count = notes_count >> 28;
-    count &&printf("%d notes of %dRs\n", count, notes[index]);
+    count &&printf(" -> %d notes of %d Rs.\n", count, notes[index]);
     notes_count = notes_count << 4;
   }
+  printf("\n\n");
   return 0;
 }
 
@@ -20,6 +21,7 @@ int main(void)
   unsigned short int amounts[] = {1, 10, 39, 589, 2590, 31999};
   for (int i = 0; i < 6; i++)
   {
+    printf("Total Amount is %u Rs.\n\n", amounts[i]);
     display_notes(get_money(amounts[i]));
   }
 
