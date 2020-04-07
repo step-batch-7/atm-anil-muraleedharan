@@ -9,7 +9,7 @@ int display_notes(unsigned int notes_count)
   for (int index = 0; index < 8; index++)
   {
     int count = notes_count >> 28;
-    count &&printf(" -> %d notes of %d Rs.\n", count, notes[index]);
+    count &&printf(" -> %d %s of %d Rs.\n", count, count == 1 ? "note" : "notes", notes[index]);
     notes_count = notes_count << 4;
   }
   printf("\n\n");
